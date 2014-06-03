@@ -31,3 +31,5 @@ spec/dummy/log/*.log
 spec/dummy/tmp/
 spec/dummy/.sass-cache
 
+# vi swap files
+.*.swp

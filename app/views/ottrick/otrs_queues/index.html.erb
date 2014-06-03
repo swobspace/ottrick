@@ -1,0 +1,30 @@
+<h1><%= t('controller.otrs_queues') %></h1>
+
+<table id="dataTable" class="table table-bordered table-striped dataTable">
+<thead>
+  <tr>
+    <th><%= t('attributes.name') %></th>
+    <th><%= t('attributes.otrs_queue_id') %></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+
+<% @otrs_queues.each do |otrs_queue| %>
+  <%= content_tag_for(:tr, otrs_queue) do %>
+    <td><%= otrs_queue.name %></td>
+    <td><%= otrs_queue.otrs_queue_id %></td>
+    <td class="nowrap">
+      <%= show_link otrs_queue %>
+      <%= edit_link otrs_queue %>
+      <%= delete_link otrs_queue %>
+    </td>
+  <% end %>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+<%= back_link %>
+<%= new_link Ottrick::OtrsQueue %>

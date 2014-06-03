@@ -1,0 +1,17 @@
+<table class="table table-bordered table-hover autowidth">
+  <tr>
+    <th><%= t('attributes.name')%>:</th>
+    <td><%= @otrs_queue.name %></td>
+  </tr>
+  <tr>
+    <th><%= t('attributes.otrs_queue_id')%>:</th>
+    <td><%= @otrs_queue.otrs_queue_id %></td>
+  </tr>
+</table>
+
+<div class="btn-toolbar" role="toolbar">
+  <%= back_link %>
+  <%= edit_link(@otrs_queue) %>
+  <%= delete_link(@otrs_queue) %>
+  <%= new_link Ottrick::OtrsQueue %>
+</div>

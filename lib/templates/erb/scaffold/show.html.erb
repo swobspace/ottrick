@@ -1,0 +1,15 @@
+<table class="table table-bordered table-hover autowidth">
+<% attributes.each do |attribute| -%>
+  <tr>
+    <th><%%= t('attributes.<%= attribute.name %>')%>:</th>
+    <td><%%= @<%= singular_table_name %>.<%= attribute.name %> %></td>
+  </tr>
+<% end -%>
+</table>
+
+<div class="btn-toolbar" role="toolbar">
+  <%%= back_link %>
+  <%%= edit_link(@<%= singular_table_name %>) %>
+  <%%= delete_link(@<%= singular_table_name %>) %>
+  <%%= new_link <%= class_name %> %>
+</div>

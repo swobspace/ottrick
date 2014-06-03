@@ -1,0 +1,201 @@
+GIT
+  remote: https://github.com/plataformatec/simple_form.git
+  revision: e8660478f924fc7fd685b6600f05e4626c7f9583
+  branch: master
+  specs:
+    simple_form (3.1.0.rc1)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+
+GIT
+  remote: https://github.com/swobspace/ottick.git
+  revision: c6c96abb834c62a2e6ea0df936e93cd40967804e
+  branch: master
+  specs:
+    ottick (0.0.1)
+      activesupport
+      savon (~> 2.0)
+
+GIT
+  remote: https://github.com/swobspace/wobapphelpers.git
+  revision: dc6a1903fe9644e61e9ec11847eb0fbef40f1890
+  branch: master
+  specs:
+    wobapphelpers (0.0.1)
+      responders
+
+PATH
+  remote: .
+  specs:
+    ottrick (0.0.1)
+      coffee-rails
+      ottick
+      rails (~> 4.1.1)
+      sass-rails
+      simple_form
+      wobapphelpers
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionmailer (4.1.1)
+      actionpack (= 4.1.1)
+      actionview (= 4.1.1)
+      mail (~> 2.5.4)
+    actionpack (4.1.1)
+      actionview (= 4.1.1)
+      activesupport (= 4.1.1)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    actionview (4.1.1)
+      activesupport (= 4.1.1)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+    activemodel (4.1.1)
+      activesupport (= 4.1.1)
+      builder (~> 3.1)
+    activerecord (4.1.1)
+      activemodel (= 4.1.1)
+      activesupport (= 4.1.1)
+      arel (~> 5.0.0)
+    activesupport (4.1.1)
+      i18n (~> 0.6, >= 0.6.9)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.1)
+      tzinfo (~> 1.1)
+    akami (1.2.2)
+      gyoku (>= 0.4.0)
+      nokogiri
+    arel (5.0.1.20140414130214)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
+    builder (3.2.2)
+    coffee-rails (4.0.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.7.0)
+    diff-lcs (1.2.5)
+    erubis (2.7.0)
+    execjs (2.1.0)
+    factory_girl (4.4.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
+      railties (>= 3.0.0)
+    gyoku (1.1.1)
+      builder (>= 2.1.2)
+    hike (1.2.3)
+    httpi (2.1.0)
+      rack
+      rubyntlm (~> 0.3.2)
+    i18n (0.6.9)
+    json (1.8.1)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.25.1)
+    mini_portile (0.6.0)
+    minitest (5.3.4)
+    multi_json (1.10.1)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
+    nori (2.4.0)
+    polyglot (0.3.5)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (4.1.1)
+      actionmailer (= 4.1.1)
+      actionpack (= 4.1.1)
+      actionview (= 4.1.1)
+      activemodel (= 4.1.1)
+      activerecord (= 4.1.1)
+      activesupport (= 4.1.1)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.1.1)
+      sprockets-rails (~> 2.0)
+    railties (4.1.1)
+      actionpack (= 4.1.1)
+      activesupport (= 4.1.1)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.3.2)
+    responders (1.1.0)
+      railties (>= 3.2, < 5)
+    rspec-core (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-rails (3.0.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.0)
+    rubyntlm (0.3.4)
+    sass (3.2.19)
+    sass-rails (4.0.3)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
+      sprockets-rails (~> 2.0)
+    savon (2.5.1)
+      akami (~> 1.2.0)
+      builder (>= 2.1.2)
+      gyoku (~> 1.1.0)
+      httpi (~> 2.1.0)
+      nokogiri (>= 1.4.0)
+      nori (~> 2.4.0)
+      uuid (~> 2.3.7)
+      wasabi (~> 3.3.0)
+    sprockets (2.11.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.1.3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
+    sqlite3 (1.3.9)
+    systemu (2.6.4)
+    thor (0.19.1)
+    thread_safe (0.3.4)
+    tilt (1.4.1)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    tzinfo (1.2.1)
+      thread_safe (~> 0.1)
+    uuid (2.3.7)
+      macaddr (~> 1.0)
+    wasabi (3.3.0)
+      httpi (~> 2.0)
+      mime-types (< 2.0.0)
+      nokogiri (>= 1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bootstrap-sass (~> 3.1.1)
+  factory_girl_rails
+  ottick!
+  ottrick!
+  rspec-rails
+  sass-rails (~> 4.0.3)
+  simple_form!
+  sqlite3
+  wobapphelpers!

@@ -97,6 +97,9 @@ GEM
       rack
       rubyntlm (~> 0.3.2)
     i18n (0.6.9)
+    jquery-rails (3.1.0)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.8.1)
     macaddr (1.7.1)
       systemu (~> 2.6.2)
@@ -204,6 +207,7 @@ DEPENDENCIES
   database_cleaner
   dotenv
   factory_girl_rails
+  jquery-rails
   ottick!
   ottrick!
   rspec-rails

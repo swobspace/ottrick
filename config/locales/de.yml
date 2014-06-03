@@ -1,7 +1,8 @@
 de:
   activerecord:
     models:
-      ticket: Ticket
+      ottrick/otrs_queue: OTRS-Queue
+      ottrick/ticket: Ticket
 
   attributes:
     subject: Betreff
@@ -9,9 +10,12 @@ de:
     displayname: Anzeigename
     givenname: Vorname
     name: Name
+    queue: Queue
     sn: Nachname
+    ticket: Ticket
     username: Username
 
   controller:
-    tickets: Tickets
+    ottrick/otrs_queues: OTRS-Queues
+    ottrick/tickets: Tickets
 

@@ -20,7 +20,8 @@ Ticket
 ------
 
     bin/rails g scaffold Ticket ticketfor:references ticketfor_type:string \
-                sender:string queue:references subject:string text:text
+                sender:string queue:references subject:string text:text \
+		ticketnumber:string otrs_ticket_id:integer:index
 
 Queue
 ------

@@ -9,7 +9,9 @@ RSpec.describe "tickets/index", :type => :view do
         :sender => "Sender",
         :queue => nil,
         :subject => "Subject",
-        :text => "MyText"
+        :text => "MyText",
+        :ticketnumber => "Ticketnumber",
+        :otrs_ticket_id => 1
       ),
       Ticket.create!(
         :ticketfor => nil,
@@ -17,7 +19,9 @@ RSpec.describe "tickets/index", :type => :view do
         :sender => "Sender",
         :queue => nil,
         :subject => "Subject",
-        :text => "MyText"
+        :text => "MyText",
+        :ticketnumber => "Ticketnumber",
+        :otrs_ticket_id => 1
       )
     ])
   end
@@ -30,5 +34,7 @@ RSpec.describe "tickets/index", :type => :view do
     assert_select "tr>td", :text => nil.to_s, :count => 2
     assert_select "tr>td", :text => "Subject".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
+    assert_select "tr>td", :text => "Ticketnumber".to_s, :count => 2
+    assert_select "tr>td", :text => 1.to_s, :count => 2
   end
 end

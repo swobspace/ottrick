@@ -7,8 +7,11 @@ class CreateOttrickTickets < ActiveRecord::Migration
       t.references :queue, index: true
       t.string :subject
       t.text :text
+      t.string :ticketnumber
+      t.integer :otrs_ticket_id
 
       t.timestamps
     end
+    add_index :ottrick_tickets, :otrs_ticket_id
   end
 end

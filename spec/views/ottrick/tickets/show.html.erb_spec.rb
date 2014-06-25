@@ -8,7 +8,9 @@ RSpec.describe "tickets/show", :type => :view do
       :sender => "Sender",
       :queue => nil,
       :subject => "Subject",
-      :text => "MyText"
+      :text => "MyText",
+      :ticketnumber => "Ticketnumber",
+      :otrs_ticket_id => 1
     ))
   end
 
@@ -20,5 +22,7 @@ RSpec.describe "tickets/show", :type => :view do
     expect(rendered).to match(//)
     expect(rendered).to match(/Subject/)
     expect(rendered).to match(/MyText/)
+    expect(rendered).to match(/Ticketnumber/)
+    expect(rendered).to match(/1/)
   end
 end

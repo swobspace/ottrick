@@ -9,6 +9,8 @@
     <th><%= t('attributes.queue') %></th>
     <th><%= t('attributes.subject') %></th>
     <th><%= t('attributes.text') %></th>
+    <th><%= t('attributes.ticketnumber') %></th>
+    <th><%= t('attributes.otrs_ticket_id') %></th>
     <th></th>
   </tr>
 </thead>
@@ -22,6 +24,8 @@
     <td><%= ticket.queue %></td>
     <td><%= ticket.subject %></td>
     <td><%= ticket.text %></td>
+    <td><%= ticket.ticketnumber %></td>
+    <td><%= ticket.otrs_ticket_id %></td>
     <td class="nowrap">
       <%= show_link ticket %>
       <%= edit_link ticket %>

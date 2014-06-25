@@ -2,11 +2,11 @@ module Ottrick
   class Ticket < ActiveRecord::Base
     # -- associations
     belongs_to :ticketfor, polymorphic: true
-    belongs_to :queue
+    belongs_to :otrs_queue
 
     # -- configuration
     # -- validations and callbacks
-    validates :subject, :text, :sender, :queue_id, :presence => true
+    validates :subject, :text, :sender, :otrs_queue_id, :presence => true
 
     def to_s
       "#{ticketnumber} #{subject}"

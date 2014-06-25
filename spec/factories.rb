@@ -12,7 +12,7 @@ FactoryGirl.define do
     subject "Just a Ticket"
     text    "should be a concrete description"
     sender  "tester@example.com"
-    queue_id 1
+    otrs_queue_id 1
   end
 
 

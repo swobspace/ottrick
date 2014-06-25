@@ -54,7 +54,7 @@ module Ottrick
 
       # Only allow a trusted parameter "white list" through.
       def ticket_params
-        params.require(:ticket).permit(:ticketfor_id, :ticketfor_type, :sender, :queue_id, :subject, :text)
+        params.require(:ticket).permit(:ticketfor_id, :ticketfor_type, :sender, :otrs_queue_id, :subject, :text)
       end
   end
 end

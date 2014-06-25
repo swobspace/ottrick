@@ -12,13 +12,10 @@
     <%= form_legend %>
 
     <div class="form-inputs">
-      <%= f.association :ticketfor
-       %>
-      <%= f.input :ticketfor_type
-       %>
+      <%= polymorphic_selector(f, 'authorizable', Ottrick.ticketfor_types) %>
       <%= f.input :sender
        %>
-      <%= f.association :queue
+      <%= f.association :otrs_queue
        %>
       <%= f.input :subject
        %>

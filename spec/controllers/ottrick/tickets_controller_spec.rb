@@ -26,7 +26,7 @@ module Ottrick
     # Ticket. As you add validations to Ticket, be sure to
     # adjust the attributes here as well.
     let(:valid_attributes) {{
-      sender: "info@example.net", queue_id: 1, subject: "einfaches Subject",
+      sender: "info@example.net", otrs_queue_id: 1, subject: "einfaches Subject",
       text: "should be a longer description"
     }}
 

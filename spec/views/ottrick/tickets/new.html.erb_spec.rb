@@ -7,7 +7,7 @@ RSpec.describe "tickets/new", :type => :view do
       :ticketfor_id => 1234,
       :ticketfor_type => "MyString",
       :sender => "MyString",
-      :queue_id => 1,
+      :otrs_queue_id => 1,
       :subject => "MyString",
       :text => "MyText"
     ))
@@ -25,7 +25,7 @@ RSpec.describe "tickets/new", :type => :view do
 
       assert_select "input#ticket_sender[name=?]", "ticket[sender]"
 
-      assert_select "input#ticket_queue_id[name=?]", "ticket[queue_id]"
+      assert_select "input#ticket_otrs_queue_id[name=?]", "ticket[otrs_queue_id]"
 
       assert_select "input#ticket_subject[name=?]", "ticket[subject]"
 

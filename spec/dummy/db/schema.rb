@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140625153749) do
     t.integer  "ticketfor_id"
     t.string   "ticketfor_type"
     t.string   "sender"
-    t.integer  "queue_id"
+    t.integer  "otrs_queue_id"
     t.string   "subject",        default: ""
     t.text     "text",           default: ""
     t.string   "ticketnumber",   default: ""
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20140625153749) do
     t.datetime "updated_at"
   end
 
+  add_index "ottrick_tickets", ["otrs_queue_id"], name: "index_ottrick_tickets_on_otrs_queue_id"
   add_index "ottrick_tickets", ["otrs_ticket_id"], name: "index_ottrick_tickets_on_otrs_ticket_id"
-  add_index "ottrick_tickets", ["queue_id"], name: "index_ottrick_tickets_on_queue_id"
   add_index "ottrick_tickets", ["ticketfor_id"], name: "index_ottrick_tickets_on_ticketfor_id"
 
 end

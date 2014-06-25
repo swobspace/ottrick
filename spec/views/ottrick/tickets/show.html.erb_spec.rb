@@ -7,7 +7,7 @@ module Ottrick
       :ticketfor_id => 1234,
       :ticketfor_type => "Ticketfor Type",
       :sender => "Sender",
-      :queue_id => 1,
+      :otrs_queue_id => 1,
       :subject => "Subject",
       :text => "MyText",
       :ticketnumber => "Ticketnumber",

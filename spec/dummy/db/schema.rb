@@ -25,12 +25,15 @@ ActiveRecord::Schema.define(version: 20140625153749) do
     t.string   "ticketfor_type"
     t.string   "sender"
     t.integer  "queue_id"
-    t.string   "subject"
-    t.text     "text"
+    t.string   "subject",        default: ""
+    t.text     "text",           default: ""
+    t.string   "ticketnumber",   default: ""
+    t.integer  "otrs_ticket_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "ottrick_tickets", ["otrs_ticket_id"], name: "index_ottrick_tickets_on_otrs_ticket_id"
   add_index "ottrick_tickets", ["queue_id"], name: "index_ottrick_tickets_on_queue_id"
   add_index "ottrick_tickets", ["ticketfor_id"], name: "index_ottrick_tickets_on_ticketfor_id"
 

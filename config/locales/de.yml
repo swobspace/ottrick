@@ -5,14 +5,20 @@ de:
       ottrick/ticket: Ticket
 
   attributes:
-    subject: Betreff
     description: Beschreibung
     displayname: Anzeigename
     givenname: Vorname
     name: Name
-    queue: Queue
+    otrs_queue: OTRS-Queue
+    otrs_ticket_id: OTRS Ticket-ID
+    sender: Absender
     sn: Nachname
+    subject: Betreff
+    text: Text
     ticket: Ticket
+    ticketfor: Ticket für
+    ticketfor_type: Ticket für (Typ)
+    ticketnumber: Ticketnummer
     username: Username
 
   controller:

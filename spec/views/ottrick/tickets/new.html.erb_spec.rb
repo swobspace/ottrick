@@ -1,18 +1,20 @@
 require 'rails_helper'
 
+module Ottrick
 RSpec.describe "tickets/new", :type => :view do
   before(:each) do
     assign(:ticket, Ticket.new(
-      :ticketfor => nil,
+      :ticketfor_id => 1234,
       :ticketfor_type => "MyString",
       :sender => "MyString",
-      :queue => nil,
+      :queue_id => 1,
       :subject => "MyString",
       :text => "MyText"
     ))
   end
 
   it "renders new ticket form" do
+    pending "name spacing wobapphelpers link not yet resolved"
     render
 
     assert_select "form[action=?][method=?]", tickets_path, "post" do
@@ -30,4 +32,5 @@ RSpec.describe "tickets/new", :type => :view do
       assert_select "textarea#ticket_text[name=?]", "ticket[text]"
     end
   end
+end
 end

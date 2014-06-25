@@ -1,28 +1,31 @@
 require 'rails_helper'
 
-RSpec.describe "tickets/show", :type => :view do
+module Ottrick
+ RSpec.describe "tickets/show", :type => :view do
   before(:each) do
     @ticket = assign(:ticket, Ticket.create!(
-      :ticketfor => nil,
+      :ticketfor_id => 1234,
       :ticketfor_type => "Ticketfor Type",
       :sender => "Sender",
-      :queue => nil,
+      :queue_id => 1,
       :subject => "Subject",
       :text => "MyText",
       :ticketnumber => "Ticketnumber",
-      :otrs_ticket_id => 1
+      :otrs_ticket_id => 99
     ))
   end
 
   it "renders attributes in <p>" do
+    pending "name spacing wobapphelpers link not yet resolved"
     render
-    expect(rendered).to match(//)
+    expect(rendered).to match(/1234/)
     expect(rendered).to match(/Ticketfor Type/)
     expect(rendered).to match(/Sender/)
-    expect(rendered).to match(//)
+    expect(rendered).to match(/1/)
     expect(rendered).to match(/Subject/)
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/Ticketnumber/)
-    expect(rendered).to match(/1/)
+    expect(rendered).to match(/99/)
   end
+ end
 end

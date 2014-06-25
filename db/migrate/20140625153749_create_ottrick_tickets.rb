@@ -5,9 +5,9 @@ class CreateOttrickTickets < ActiveRecord::Migration
       t.string :ticketfor_type
       t.string :sender
       t.references :queue, index: true
-      t.string :subject
-      t.text :text
-      t.string :ticketnumber
+      t.string :subject, default: ""
+      t.text :text, default: ""
+      t.string :ticketnumber, default: ""
       t.integer :otrs_ticket_id
 
       t.timestamps

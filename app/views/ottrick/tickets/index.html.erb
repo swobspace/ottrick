@@ -1,0 +1,38 @@
+<h1><%= t('controller.tickets') %></h1>
+
+<table id="dataTable" class="table table-bordered table-striped dataTable">
+<thead>
+  <tr>
+    <th><%= t('attributes.ticketfor') %></th>
+    <th><%= t('attributes.ticketfor_type') %></th>
+    <th><%= t('attributes.sender') %></th>
+    <th><%= t('attributes.queue') %></th>
+    <th><%= t('attributes.subject') %></th>
+    <th><%= t('attributes.text') %></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+
+<% @tickets.each do |ticket| %>
+  <%= content_tag_for(:tr, ticket) do %>
+    <td><%= ticket.ticketfor %></td>
+    <td><%= ticket.ticketfor_type %></td>
+    <td><%= ticket.sender %></td>
+    <td><%= ticket.queue %></td>
+    <td><%= ticket.subject %></td>
+    <td><%= ticket.text %></td>
+    <td class="nowrap">
+      <%= show_link ticket %>
+      <%= edit_link ticket %>
+      <%= delete_link ticket %>
+    </td>
+  <% end %>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+<%= back_link %>
+<%= new_link Ticket %>

@@ -1,0 +1,33 @@
+<table class="table table-bordered table-hover autowidth">
+  <tr>
+    <th><%= t('attributes.ticketfor')%>:</th>
+    <td><%= @ticket.ticketfor %></td>
+  </tr>
+  <tr>
+    <th><%= t('attributes.ticketfor_type')%>:</th>
+    <td><%= @ticket.ticketfor_type %></td>
+  </tr>
+  <tr>
+    <th><%= t('attributes.sender')%>:</th>
+    <td><%= @ticket.sender %></td>
+  </tr>
+  <tr>
+    <th><%= t('attributes.queue')%>:</th>
+    <td><%= @ticket.queue %></td>
+  </tr>
+  <tr>
+    <th><%= t('attributes.subject')%>:</th>
+    <td><%= @ticket.subject %></td>
+  </tr>
+  <tr>
+    <th><%= t('attributes.text')%>:</th>
+    <td><%= @ticket.text %></td>
+  </tr>
+</table>
+
+<div class="btn-toolbar" role="toolbar">
+  <%= back_link %>
+  <%= edit_link(@ticket) %>
+  <%= delete_link(@ticket) %>
+  <%= new_link Ticket %>
+</div>

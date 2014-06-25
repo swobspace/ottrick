@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603181759) do
+ActiveRecord::Schema.define(version: 20140625153749) do
 
   create_table "ottrick_otrs_queues", force: true do |t|
     t.string   "name"
@@ -19,5 +19,19 @@ ActiveRecord::Schema.define(version: 20140603181759) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "ottrick_tickets", force: true do |t|
+    t.integer  "ticketfor_id"
+    t.string   "ticketfor_type"
+    t.string   "sender"
+    t.integer  "queue_id"
+    t.string   "subject"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ottrick_tickets", ["queue_id"], name: "index_ottrick_tickets_on_queue_id"
+  add_index "ottrick_tickets", ["ticketfor_id"], name: "index_ottrick_tickets_on_ticketfor_id"
 
 end

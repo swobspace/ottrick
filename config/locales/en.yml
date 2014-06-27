@@ -1,0 +1,27 @@
+de:
+  activerecord:
+    models:
+      ottrick/otrs_queue: OTRS queue
+      ottrick/ticket: ticket
+
+  attributes:
+    description: description
+    displayname: displayname
+    givenname: givenname
+    name: name
+    otrs_queue: OTRS queue
+    otrs_ticket_id: OTRS ticket id
+    sender: sender
+    sn: sn
+    subject: subject
+    text: text
+    ticket: ticket
+    ticketfor: ticket for
+    ticketfor_type: ticket for type
+    ticketnumber: ticketnumber
+    username: username
+
+  controller:
+    ottrick/otrs_queues: OTRS queues
+    ottrick/tickets: tickets
+

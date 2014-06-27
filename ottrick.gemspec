@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "database_cleaner"
   s.add_development_dependency "shoulda"
   s.add_development_dependency "dotenv"
+  s.add_development_dependency "generator_spec"
 
 
 end

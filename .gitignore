@@ -33,3 +33,4 @@ spec/dummy/.sass-cache
 
 # vi swap files
 .*.swp
+.localenv

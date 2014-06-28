@@ -6,13 +6,32 @@ module Ottrick
     yield self
   end
 
-  # ticketfor_types
+  # ticketfor_types: your models for which you would create one or more tickets
+  # ottrick uses a polymorphic association:
+  #
+  # Ottrick::Ticket < ActiveRecord::Base
+  #   belongs_to :ticketfor, polymorphic: true
+  # end
+  # 
+  # so your model should be defined like this:
+  #
+  # MyModel < ActiveRecord::Base
+  #   has_many :tickets, as: :ticketfor
+  # end
+  # 
+  # Example: config.ticketfor_types = ["MyModel"]
+  #
+  # config.ticketfor_types = []
+
   #
   mattr_accessor :ticketfor_types
   @@ticketfor_types = [ ]
 
 
-  # delegate to Ottick
+  # delegate accessors for the otrs generic Interface to Ottick
+  # see https://github.com/swobspace/ottick/blob/master/lib/ottick.rb
+  # for more information
+  #
   OTTICK_ACCESSORS = [
     "endpoint",		# endpoint for soap
     "wsdl",		# i.e. GenericTicketConnector.wsdl

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 module Ottrick
-RSpec.describe "ottrick/tickets/edit", :type => :view do
+RSpec.describe "ottrick/tickets/edit", :type => :view, modify: true do
   before(:each) do
     @ticket = assign(:ticket, Ticket.create!(
       :ticketfor_id => 1234, 

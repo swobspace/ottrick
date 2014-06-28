@@ -64,7 +64,7 @@ end
 More configuration options for the OTRS generic interface can be found in
 [swobspace/ottick/lib/ottick.rb](https://github.com/swobspace/ottick/blob/master/lib/ottick.rb). Use it on your own risk. Changing defaults may break ottrick.
 
-### Special case: OTRS http_authentication
+### Special case: OTRS HTTPBasicAuth
 If you have set `AuthModule` to `Kernel::System::Auth::HTTPBasicAuth` in OTRS/Kernel/Config.pm, you need to set http authentication params too:
 
 ```ruby

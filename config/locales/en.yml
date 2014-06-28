@@ -1,4 +1,4 @@
-de:
+en:
   activerecord:
     models:
       ottrick/otrs_queue: OTRS queue

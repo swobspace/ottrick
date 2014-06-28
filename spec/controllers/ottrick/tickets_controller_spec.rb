@@ -19,7 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 module Ottrick
-  RSpec.describe TicketsController, :type => :controller do
+  RSpec.describe TicketsController, :type => :controller, modify: true do
   routes { Ottrick::Engine.routes }
 
     # This should return the minimal set of attributes required to create a valid

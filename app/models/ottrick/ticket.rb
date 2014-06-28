@@ -1,6 +1,6 @@
 module Ottrick
   class Ticket < ActiveRecord::Base
-    include Ticket::Concerns
+    include TicketConcerns
 
     # -- associations
     belongs_to :ticketfor, polymorphic: true

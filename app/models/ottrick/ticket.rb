@@ -1,5 +1,7 @@
 module Ottrick
   class Ticket < ActiveRecord::Base
+    include Ticket::Concerns
+
     # -- associations
     belongs_to :ticketfor, polymorphic: true
     belongs_to :otrs_queue

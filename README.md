@@ -32,6 +32,8 @@ class Protocol < ActiveRecord::Base
   has_many :tickets, as: :ticketfor
 end
 ```
+`:ticketfor` is polymorphic association. To access your models from Ottrick::Ticket,
+your models have to be set in `config.ticketfor_types` (see Configuration).
 The ottrick_tickets#new form should be called from protocols#show prefilled with
 sender, subject and text from protocols. After execute create ottrick_tickets
 ticket number and ticket id returned from OTRS are also stored in ottrick_ticket object.
@@ -47,7 +49,7 @@ rails g ottrick:install
 
 ```ruby
 Ottrick.setup do |config|
-  config.ticketfor_types = ["MyStuff"]  
+  config.ticketfor_types = ["Protocol"]
 
   # ---
   # configuration for OTRS generic interface
@@ -56,14 +58,28 @@ Ottrick.setup do |config|
   config.endpoint = "http(s)://yourhost/otrs/nph-genericinterface.pl/Webservice/GenericTicketConnector"
   config.otrs_user = your_valid_otrs_user
   config.otrs_passwd = your_valid_otrs_password
-
-  # likely to be set to match your configuration
-  conf.ticket_queue = your_incoming_queue
- ...
 end
 ```
+
 More configuration options for the OTRS generic interface can be found in
 [swobspace/ottick/lib/ottick.rb](https://github.com/swobspace/ottick/blob/master/lib/ottick.rb). Use it on your own risk. Changing defaults may break ottrick.
+
+### Special case: OTRS http_authentication
+If you have set `AuthModule` to `Kernel::System::Auth::HTTPBasicAuth` in OTRS/Kernel/Config.pm, you need to set http authentication params too:
+
+```ruby
+Ottrick.setup do |config|
+  ...
+  config.http_auth_user   = your_valid_otrs_and_http_user
+  config.http_auth_passwd = your_valid_http_password
+  ...
+end
+```
+In case of HTTP authentication, http_auth_user must be a valid otrs user and
+be able to login via http. All actions to read and create tickets in otrs
+are done with http_auth_user. otrs_user and otrs_passwd must be specified, but 
+are only used as dummy. This is the current behavior of the OTRS generic 
+interface implementation and may change in the future.
 
 Usage
 -----

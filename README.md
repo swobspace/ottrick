@@ -50,6 +50,7 @@ rails g ottrick:install
 ```ruby
 Ottrick.setup do |config|
   config.ticketfor_types = ["Protocol"]
+  config.ticket_zoom_url = "http://localhost/otrs/index.pl?Action=AgentTicketZoom"
 
   # ---
   # configuration for OTRS generic interface

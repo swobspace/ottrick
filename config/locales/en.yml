@@ -1,4 +1,8 @@
 en:
+  ottrick:
+    errors:
+      otrs_ticket_not_created: ticket could not created in OTRS!
+
   activerecord:
     models:
       ottrick/otrs_queue: OTRS queue

@@ -15,5 +15,12 @@ module Ottrick
       assert g.valid?
       assert f.valid?
     end
+
+    describe "with invalid GenericInterface settings" do
+    end
+
+    describe "with valid GenericInterface settings" do
+    end
+
   end
 end

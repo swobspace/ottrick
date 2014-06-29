@@ -17,6 +17,8 @@ Ottrick.setup do |config|
   # ---
   # config.ticketfor_types = []
 
+  config.ticket_zoom_url = https://mintra3.marienhaus.de/otrs/index.pl?Action=AgentTicketZoom;TicketID=
+
   ##################################################
   # Parameter for the Otrs generic interface
   ##################################################

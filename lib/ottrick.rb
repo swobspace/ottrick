@@ -21,12 +21,16 @@ module Ottrick
   # 
   # Example: config.ticketfor_types = ["MyModel"]
   #
-  # config.ticketfor_types = []
-
+  # ticketfor_types = []
   #
   mattr_accessor :ticketfor_types
   @@ticketfor_types = [ ]
 
+  # OTRS ticket zoom url 
+  # Example:
+  # ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom;TicketID=
+  mattr_accessor :ticket_zoom_url
+  @@ticket_zoom_url = ''
 
   # delegate accessors for the otrs generic Interface to Ottick
   # see https://github.com/swobspace/ottick/blob/master/lib/ottick.rb

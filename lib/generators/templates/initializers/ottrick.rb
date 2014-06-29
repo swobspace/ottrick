@@ -17,6 +17,13 @@ Ottrick.setup do |config|
   # ---
   # config.ticketfor_types = []
 
+  # ---
+  # OTRS ticket zoom url 
+  # Example:
+  # config.ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom;TicketID=
+  # ---
+  # config.ticket_zoom_url = ''
+
   ##################################################
   # Parameter for the Otrs generic interface
   ##################################################

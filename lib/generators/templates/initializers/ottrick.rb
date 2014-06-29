@@ -20,7 +20,7 @@ Ottrick.setup do |config|
   # ---
   # OTRS ticket zoom url 
   # Example:
-  # config.ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom;TicketID=
+  # config.ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom
   # ---
   # config.ticket_zoom_url = ''
 

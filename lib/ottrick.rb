@@ -28,7 +28,7 @@ module Ottrick
 
   # OTRS ticket zoom url 
   # Example:
-  # ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom;TicketID=
+  # ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom
   mattr_accessor :ticket_zoom_url
   @@ticket_zoom_url = ''
 

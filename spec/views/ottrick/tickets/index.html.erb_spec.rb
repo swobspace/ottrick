@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 module Ottrick
-RSpec.describe "ottrick/tickets/index", :type => :view, modify: true do
+RSpec.describe "ottrick/tickets/index", :type => :view, modify: false do
   before(:each) do
     assign(:tickets, [
-      Ticket.create!(
+      FactoryGirl.create(:ticket,
         :ticketfor_id => 1234,
         :ticketfor_type => "Ticketfor Type",
         :sender => "Sender",
@@ -14,7 +14,7 @@ RSpec.describe "ottrick/tickets/index", :type => :view, modify: true do
         :ticketnumber => "Ticketnumber",
         :otrs_ticket_id => 99
       ),
-      Ticket.create!(
+      FactoryGirl.create(:ticket,
         :ticketfor_id => 1234,
         :ticketfor_type => "Ticketfor Type",
         :sender => "Sender",

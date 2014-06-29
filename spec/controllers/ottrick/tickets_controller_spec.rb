@@ -19,7 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 module Ottrick
-  RSpec.describe TicketsController, :type => :controller, modify: true do
+  RSpec.describe TicketsController, :type => :controller do
   routes { Ottrick::Engine.routes }
 
     # This should return the minimal set of attributes required to create a valid
@@ -41,7 +41,7 @@ module Ottrick
 
     describe "GET index" do
       it "assigns all tickets as @tickets" do
-        ticket = Ticket.create! valid_attributes
+        ticket = FactoryGirl.create(:ticket,  valid_attributes)
         get :index, {}, valid_session
         expect(assigns(:tickets)).to eq([ticket])
       end
@@ -49,7 +49,7 @@ module Ottrick
 
     describe "GET show" do
       it "assigns the requested ticket as @ticket" do
-        ticket = Ticket.create! valid_attributes
+        ticket = FactoryGirl.create(:ticket,  valid_attributes)
         get :show, {:id => ticket.to_param}, valid_session
         expect(assigns(:ticket)).to eq(ticket)
       end
@@ -64,7 +64,7 @@ module Ottrick
 
     describe "GET edit" do
       it "assigns the requested ticket as @ticket" do
-        ticket = Ticket.create! valid_attributes
+        ticket = FactoryGirl.create(:ticket,  valid_attributes)
         get :edit, {:id => ticket.to_param}, valid_session
         expect(assigns(:ticket)).to eq(ticket)
       end
@@ -110,20 +110,20 @@ module Ottrick
         }
 
         it "updates the requested ticket" do
-          ticket = Ticket.create! valid_attributes
+          ticket = FactoryGirl.create(:ticket,  valid_attributes)
           put :update, {:id => ticket.to_param, :ticket => new_attributes}, valid_session
           ticket.reload
           skip("Add assertions for updated state")
         end
 
         it "assigns the requested ticket as @ticket" do
-          ticket = Ticket.create! valid_attributes
+          ticket = FactoryGirl.create(:ticket,  valid_attributes)
           put :update, {:id => ticket.to_param, :ticket => valid_attributes}, valid_session
           expect(assigns(:ticket)).to eq(ticket)
         end
 
         it "redirects to the ticket" do
-          ticket = Ticket.create! valid_attributes
+          ticket = FactoryGirl.create(:ticket,  valid_attributes)
           put :update, {:id => ticket.to_param, :ticket => valid_attributes}, valid_session
           expect(response).to redirect_to(ticket)
         end
@@ -131,14 +131,14 @@ module Ottrick
 
       describe "with invalid params" do
         it "assigns the ticket as @ticket" do
-          ticket = Ticket.create! valid_attributes
+          ticket = FactoryGirl.create(:ticket,  valid_attributes)
           put :update, {:id => ticket.to_param, :ticket => invalid_attributes}, valid_session
           expect(assigns(:ticket)).to eq(ticket)
         end
 
         it "re-renders the 'edit' template" do
           pending "example does not work, reason unknown"
-          ticket = Ticket.create! valid_attributes
+          ticket = FactoryGirl.create(:ticket,  valid_attributes)
           put :update, {:id => ticket.to_param, :ticket => invalid_attributes}, valid_session
           expect(response).to render_template("edit")
         end
@@ -147,14 +147,14 @@ module Ottrick
 
     describe "DELETE destroy" do
       it "destroys the requested ticket" do
-        ticket = Ticket.create! valid_attributes
+        ticket = FactoryGirl.create(:ticket,  valid_attributes)
         expect {
           delete :destroy, {:id => ticket.to_param}, valid_session
         }.to change(Ticket, :count).by(-1)
       end
 
       it "redirects to the tickets list" do
-        ticket = Ticket.create! valid_attributes
+        ticket = FactoryGirl.create(:ticket,  valid_attributes)
         delete :destroy, {:id => ticket.to_param}, valid_session
         expect(response).to redirect_to(tickets_url)
       end

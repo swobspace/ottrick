@@ -24,8 +24,8 @@
     <td><%= ticket.otrs_queue %></td>
     <td><%= ticket.subject %></td>
     <td><%= ticket.text %></td>
-    <td><%= ticket.ticketnumber %></td>
-    <td><%= ticket.otrs_ticket_id %></td>
+    <td><%= otrs_ticket_link(ticket, :number) %></td>
+    <td><%= otrs_ticket_link(ticket, :id) %></td>
     <td class="nowrap">
       <%= show_link ticket %>
       <%= edit_link ticket %>

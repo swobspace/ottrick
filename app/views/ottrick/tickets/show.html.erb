@@ -25,11 +25,11 @@
   </tr>
   <tr>
     <th><%= t('attributes.ticketnumber')%>:</th>
-    <td><%= @ticket.ticketnumber %></td>
+    <td><%= otrs_ticket_link(@ticket, :number) %></td>
   </tr>
   <tr>
     <th><%= t('attributes.otrs_ticket_id')%>:</th>
-    <td><%= @ticket.otrs_ticket_id %></td>
+    <td><%= otrs_ticket_link(@ticket, :id) %></td>
   </tr>
 </table>
 

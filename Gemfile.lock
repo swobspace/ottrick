@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/swobspace/ottick.git
-  revision: 8b2b3f7a3e485d4a695b4fe211e8bf38b489b859
+  revision: 227ed2f2c189c81fc7e9da263110234dac74dd4e
   branch: master
   specs:
     ottick (0.0.1)

@@ -10,5 +10,13 @@
   <%= @task.message %>
 </p>
 
+<p>
+  <strong>Tickets:</strong>
+  <%= content_tag_for(:span, @task.tickets) do |ticket| %>
+    <%= otrs_ticket_link(ticket, :number) %>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

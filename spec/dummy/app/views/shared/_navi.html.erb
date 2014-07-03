@@ -1,4 +1,7 @@
 <ul class="nav navbar-nav">
+  <li class="<%= active_class('tasks') %>"> 
+    <%= link_to t('controller.tasks'), main_app.tasks_path %>
+  </li>
   <li class="<%= active_class('ottrick/otrs_queues') %>"> 
     <%= link_to t('controller.ottrick/otrs_queues'), ottrick.otrs_queues_path %>
   </li>

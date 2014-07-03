@@ -19,8 +19,6 @@ gem 'ottrick', git: https://github.com/swobspace/ottrick.git, branch: "master"
 
 Usage
 -----
-(just to record the idea, description not yet finished)
-
 Ottrick creates a ticket in OTRS and stores some ticket data like queue,
 sender, subject, body, OTRS ticket number and OTRS ticket id in the database 
 as model Ottrick::Ticket. You can use ottrick itself, but the intended use
@@ -45,7 +43,7 @@ objects configured in ticketfor_types by model. Ottrick comes with a small javas
 to narrow the possible object selection to the preselected model type. Add
 the following line to your application.js:
 
-```ruby
+```javascript
 //= require ottrick/ottrick
 ```
 

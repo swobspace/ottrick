@@ -14,7 +14,7 @@
     <%= form_legend %>
 
     <div class="form-inputs">
-      <%= polymorphic_selector(f, 'authorizable', Ottrick.ticketfor_types) %>
+      <%= polymorphic_selector(f, 'ticketfor', Ottrick.ticketfor_types) %>
       <%= f.input :sender
        %>
       <%= f.association :otrs_queue

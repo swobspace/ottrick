@@ -29,7 +29,7 @@ and writing protocols. OTRS should be use for tracking activities:
 
 ```ruby
 class Protocol < ActiveRecord::Base
-  has_many :tickets, as: :ticketfor
+  has_many :tickets, as: :ticketfor, class: Ottrick::Ticket
 end
 ```
 `:ticketfor` is polymorphic association. To access your models from Ottrick::Ticket,

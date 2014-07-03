@@ -16,7 +16,7 @@ module Ottrick
   # so your model should be defined like this:
   #
   # MyModel < ActiveRecord::Base
-  #   has_many :tickets, as: :ticketfor
+  #   has_many :tickets, as: :ticketfor, class: Ottrick::Ticket
   # end
   # 
   # Example: config.ticketfor_types = ["MyModel"]

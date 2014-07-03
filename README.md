@@ -38,7 +38,7 @@ ticket number and ticket id returned from OTRS are also stored in ottrick_ticket
 
 ### Javascript helper
 
-The Ottrick::Ticket#new formular uses a polymorphic selector which groups all possible
+The Ottrick::Ticket#new form uses a polymorphic selector which groups all possible
 objects configured in ticketfor_types by model. Ottrick comes with a small javascript helper
 to narrow the possible object selection to the preselected model type. Add
 the following line to your application.js:

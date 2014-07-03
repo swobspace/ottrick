@@ -30,7 +30,7 @@ module Ottrick
     }
 
     let(:invalid_attributes) {
-      {quark: "dummy" }
+      {name: nil }
     }
 
     # This should return the minimal set of values that should be in the session
@@ -105,14 +105,14 @@ module Ottrick
     describe "PUT update" do
       describe "with valid params" do
         let(:new_attributes) {
-          skip("Add a hash of attributes valid for your model")
+          { name: "Tipp" }
         }
 
         it "updates the requested otrs_queue" do
           otrs_queue = OtrsQueue.create! valid_attributes
           put :update, {:id => otrs_queue.to_param, :otrs_queue => new_attributes}, valid_session
           otrs_queue.reload
-          skip("Add assertions for updated state")
+          expect(otrs_queue.name).to be == "Tipp"
         end
 
         it "assigns the requested otrs_queue as @otrs_queue" do
@@ -136,7 +136,6 @@ module Ottrick
         end
 
         it "re-renders the 'edit' template" do
-          pending "example does not work, reason unknown"
           otrs_queue = OtrsQueue.create! valid_attributes
           put :update, {:id => otrs_queue.to_param, :otrs_queue => invalid_attributes}, valid_session
           expect(response).to render_template("edit")

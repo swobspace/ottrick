@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Tickets:</strong>
+  <strong>OTRS-Tickets:</strong>
   <%= content_tag_for(:span, @task.tickets) do |ticket| %>
     <%= otrs_ticket_link(ticket, :number) %>
   <% end %>

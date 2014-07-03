@@ -1,17 +1,11 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the TicketsHelper. For example:
-#
-# describe TicketsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 module Ottrick
   RSpec.describe TicketsHelper, :type => :helper do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it "returns link to your OTRS system" do
+      ticket = FactoryGirl.create(:ticket, ticketnumber: "12345")
+      expect(otrs_ticket_link(ticket, :number)).to match /TicketNumber=12345/
+      # expect(otrs_ticket_link(ticket, :number)).to match /#{Ottrick.ticket_zoom_url};TicketNumber=12345/
+    end
   end
 end

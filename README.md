@@ -38,7 +38,16 @@ The ottrick_tickets#new form should be called from protocols#show prefilled with
 sender, subject and text from protocols. After execute create ottrick_tickets
 ticket number and ticket id returned from OTRS are also stored in ottrick_ticket object.
 
-TBD
+### Javascript helper
+
+The Ottrick::Ticket#new formular uses a polymorphic selector which groups all possible
+objects configured in ticketfor_types by model. Ottrick comes with a small javascript helper
+to narrow the possible object selection to the preselected model type. Add
+the following line to your application.js:
+
+```ruby
+//= require ottrick/ottrick
+```
 
 Configuration
 -------------
@@ -82,7 +91,7 @@ are done with http_auth_user. otrs_user and otrs_passwd must be specified, but
 are only used as dummy. This is the current behavior of the OTRS generic 
 interface implementation and may change in the future.
 
-Usage
+Example
 -----
 A simple example is the [spec/dummy](spec/dummy) application
 included in this rails engine.

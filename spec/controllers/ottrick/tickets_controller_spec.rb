@@ -20,8 +20,14 @@ require 'rails_helper'
 
 module Ottrick
   RSpec.describe TicketsController, :type => :controller do
-  routes { Ottrick::Engine.routes }
+    routes { Ottrick::Engine.routes }
 
+    around(:each) do |example|
+      Ottrick::Ticket.skip_callback(:create, :after, :create_otrs_ticket)
+      example.run
+      Ottrick::Ticket.set_callback(:create, :after, :create_otrs_ticket)
+    end
+    
     # This should return the minimal set of attributes required to create a valid
     # Ticket. As you add validations to Ticket, be sure to
     # adjust the attributes here as well.
@@ -31,7 +37,7 @@ module Ottrick
     }}
 
     let(:invalid_attributes) {
-      { quark: "dummy" }
+      { otrs_queue_id: nil }
     }
 
     # This should return the minimal set of values that should be in the session
@@ -106,14 +112,14 @@ module Ottrick
     describe "PUT update" do
       describe "with valid params" do
         let(:new_attributes) {
-          skip("Add a hash of attributes valid for your model")
+          { subject: "Neues Subject" }
         }
 
         it "updates the requested ticket" do
           ticket = FactoryGirl.create(:ticket,  valid_attributes)
           put :update, {:id => ticket.to_param, :ticket => new_attributes}, valid_session
           ticket.reload
-          skip("Add assertions for updated state")
+          expect(ticket.subject).to be == "Neues Subject" 
         end
 
         it "assigns the requested ticket as @ticket" do
@@ -137,9 +143,8 @@ module Ottrick
         end
 
         it "re-renders the 'edit' template" do
-          pending "example does not work, reason unknown"
           ticket = FactoryGirl.create(:ticket,  valid_attributes)
-          put :update, {:id => ticket.to_param, :ticket => invalid_attributes}, valid_session
+          put :update, {:id => ticket, :ticket => invalid_attributes}, valid_session
           expect(response).to render_template("edit")
         end
       end

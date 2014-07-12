@@ -9,5 +9,9 @@ module Ottrick
     end
 
     config.autoload_paths += Dir["#{config.root}/app/models/ottrick/concerns"]
+
+    config.to_prepare do
+      Ottrick::ApplicationController.helper Rails.application.helpers
+    end
   end
 end

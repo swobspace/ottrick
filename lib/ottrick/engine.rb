@@ -12,7 +12,7 @@ module Ottrick
 
     initializer 'ottrick.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
-        helper Ottrick::ApplicationHelper
+        helper Ottrick::TicketsHelper
       end
     end
 

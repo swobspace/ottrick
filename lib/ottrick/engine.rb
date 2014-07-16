@@ -10,6 +10,12 @@ module Ottrick
 
     config.autoload_paths += Dir["#{config.root}/app/models/ottrick/concerns"]
 
+    initializer 'ottrick.action_controller' do |app|
+      ActiveSupport.on_load :action_controller do
+        helper Ottrick::ApplicationHelper
+      end
+    end
+
     config.to_prepare do
       Ottrick::ApplicationController.helper Rails.application.helpers
     end

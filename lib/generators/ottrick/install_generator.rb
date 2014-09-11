@@ -17,7 +17,7 @@ module Ottrick
       end
       desc "copy migrations"
       def copy_migrations
-        copy_file "db/migrate","db/migrate"
+        copy_file "../../../db/migrate","db/migrate"
       end
     end
   end

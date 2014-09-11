@@ -20,7 +20,7 @@ Ottrick.setup do |config|
   # ---
   # OTRS ticket zoom url 
   # Example:
-  # config.ticket_zoom_url = http://localhost/otrs/index.pl?Action=AgentTicketZoom
+  # config.ticket_zoom_url = 'http://localhost/otrs/index.pl?Action=AgentTicketZoom' 
   # ---
   # config.ticket_zoom_url = ''
 
@@ -30,7 +30,7 @@ Ottrick.setup do |config|
   # ---
   # endpoint for soap
   # Example: 
-  # config.endpoint = https://localhost/otrs/nph-genericinterface.pl/Webservice/GenericTicketConnector"
+  # config.endpoint = 'https://localhost/otrs/nph-genericinterface.pl/Webservice/GenericTicketConnector'
   # Default: nil
   # ---
   # config.endpoint = nil
@@ -40,7 +40,7 @@ Ottrick.setup do |config|
   # you can download the wsdl file from https://raw.githubusercontent.com/OTRS/otrs/rel-3_3/development/webservices/GenericTicketConnector.wsdl
   # 
   # Example:
-  # config.wsdl = "GenericTicketConnector.wsdl"
+  # config.wsdl = File.expand_path(File.join(Rails.root, '../../spec/fixtures/otrs/GenericTicketConnector.wsdl'))
   # ---
   # config.wsdl = nil
 

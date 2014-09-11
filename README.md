@@ -14,7 +14,7 @@ Installation
 ------------
 
 ```ruby
-gem 'ottrick', git: https://github.com/swobspace/ottrick.git, branch: "master"
+gem 'ottrick', git: 'https://github.com/swobspace/ottrick.git' , branch: "master"
 ```
 
 Usage

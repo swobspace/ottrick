@@ -17,7 +17,7 @@ module Ottrick
       end
       desc "copy migrations"
       def copy_migrations
-        cp_r(Dir['../../../db/migrate/*'],"db/migrate")
+        FileUtils.cp_r(Dir['../../../db/migrate/*'],"db/migrate")
 	#	copy_file "../../../db/migrate/ruby","db/migrate"
       end
     end

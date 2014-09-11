@@ -17,6 +17,18 @@ Installation
 gem 'ottrick', git: 'https://github.com/swobspace/ottrick.git' , branch: "master"
 ```
 
+For rails
+---------
+Add the following to your Gemfile
+
+```ruby
+gem 'ottrick', git: 'https://github.com/swobspace/ottrick.git' , branch: "master"
+gem 'ottick', git: 'https://github.com/swobspace/ottick.git', branch: "master"
+gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers.git', branch: "master"
+gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'master'
+
+```
+
 Usage
 -----
 Ottrick creates a ticket in OTRS and stores some ticket data like queue,

@@ -15,6 +15,11 @@ module Ottrick
       def copy_initializer
         copy_file "initializers/ottrick.rb", "config/initializers/ottrick.rb"
       end
+      desc "copy migrations"
+      def copy_migrations
+        cp_r(Dir['../../../db/migrate/*'],"db/migrate")
+	#	copy_file "../../../db/migrate/ruby","db/migrate"
+      end
     end
   end
 end

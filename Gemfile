@@ -14,10 +14,6 @@ gemspec
 # gem 'debugger'
 # specifying git is not possible in *gemrc
 gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers.git',
-                     branch: "master"
+                     branch: "1-0-stable"
 gem 'ottick', git: 'https://github.com/swobspace/ottick.git',
                      branch: "master"
-
-# -- using prelease 3.1, move simple_form to gemspec after official release
-gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git',
-                   branch: 'master'

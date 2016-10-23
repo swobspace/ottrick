@@ -16,12 +16,12 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 4.1"
-  s.add_dependency "wobapphelpers"
-  s.add_dependency "ottick"
-  s.add_dependency "simple_form"
-  s.add_dependency 'sass-rails'
-  s.add_dependency 'coffee-rails'
+  s.add_runtime_dependency "rails", "~> 4.1"
+  s.add_runtime_dependency "wobapphelpers"
+  s.add_runtime_dependency "ottick"
+  s.add_runtime_dependency "simple_form"
+  s.add_runtime_dependency 'sass-rails'
+  s.add_runtime_dependency 'coffee-rails'
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

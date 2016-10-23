@@ -227,6 +227,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   shoulda
+  simple_form
   sqlite3
   wobapphelpers!
 

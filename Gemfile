@@ -17,3 +17,5 @@ gem 'wobapphelpers', git: 'https://github.com/swobspace/wobapphelpers.git',
                      branch: "1-0-stable"
 gem 'ottick', git: 'https://github.com/swobspace/ottick.git',
                      branch: "master"
+
+gem 'simple_form'

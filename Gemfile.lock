@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/swobspace/wobapphelpers.git
-  revision: 2ae54f852225b4d1d17c0e2cd6b1b0ed80acc442
+  revision: 649d2024f92a40e219d78ae3a67063abdedca4e3
   branch: 1-0-stable
   specs:
     wobapphelpers (1.0.0)

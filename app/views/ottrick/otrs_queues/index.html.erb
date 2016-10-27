@@ -15,9 +15,9 @@
     <td><%= otrs_queue.name %></td>
     <td><%= otrs_queue.otrs_queue_id %></td>
     <td class="nowrap">
-      <%= show_link otrs_queue %>
-      <%= edit_link otrs_queue %>
-      <%= delete_link otrs_queue %>
+      <%= show_link [ottrick, otrs_queue ] %>
+      <%= edit_link [ottrick, otrs_queue ] %>
+      <%= delete_link [ottrick, otrs_queue ] %>
     </td>
   <% end %>
 <% end %>
@@ -27,4 +27,4 @@
 <br />
 
 <%= back_link %>
-<%= new_link Ottrick::OtrsQueue %>
+<%= new_link [ottrick, Ottrick::OtrsQueue ] %>

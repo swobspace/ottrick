@@ -11,7 +11,7 @@
 
 <div class="btn-toolbar" role="toolbar">
   <%= back_link %>
-  <%= edit_link(@otrs_queue) %>
-  <%= delete_link(@otrs_queue) %>
-  <%= new_link Ottrick::OtrsQueue %>
+  <%= edit_link([ottrick, @otrs_queue]) %>
+  <%= delete_link([ottrick, @otrs_queue]) %>
+  <%= new_link [ottrick, Ottrick::OtrsQueue] %>
 </div>

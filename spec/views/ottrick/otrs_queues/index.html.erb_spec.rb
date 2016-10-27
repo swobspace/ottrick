@@ -3,6 +3,8 @@ require 'rails_helper'
 module Ottrick
  RSpec.describe "ottrick/otrs_queues/index", :type => :view do
   before(:each) do
+    allow(controller).to receive(:controller_name) { "ottrick_otrs_queues" }
+    allow(controller).to receive(:action_name) { "index" }
     assign(:otrs_queues, [
       OtrsQueue.create!(
         :name => "Name1",
@@ -16,7 +18,6 @@ module Ottrick
   end
 
   it "renders a list of otrs_queues" do
-      pending "name spacing wobapphelpers link not yet resolved"
     render
     assert_select "tr>td", :text => "Name1".to_s, :count => 1
     assert_select "tr>td", :text => "Name2".to_s, :count => 1

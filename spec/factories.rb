@@ -8,6 +8,11 @@ FactoryGirl.define do
     name
   end
 
+  factory :task do
+    subject "mySubject"
+    message "yet another message"
+  end
+
   factory :ticket, class: Ottrick::Ticket do
     subject "Just a Ticket"
     text    "should be a concrete description"

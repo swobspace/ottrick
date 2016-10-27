@@ -27,9 +27,9 @@
     <td><%= otrs_ticket_link(ticket, :number) %></td>
     <td><%= otrs_ticket_link(ticket, :id) %></td>
     <td class="nowrap">
-      <%= show_link ticket %>
-      <%= edit_link ticket %>
-      <%= delete_link ticket %>
+      <%= show_link [ottrick, ticket] %>
+      <%= edit_link [ottrick, ticket] %>
+      <%= delete_link [ottrick, ticket] %>
     </td>
   <% end %>
 <% end %>
@@ -39,4 +39,4 @@
 <br />
 
 <%= back_link %>
-<%= new_link Ottrick::Ticket %>
+<%= new_link [ottrick, Ottrick::Ticket ] %>

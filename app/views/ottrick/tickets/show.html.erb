@@ -35,7 +35,7 @@
 
 <div class="btn-toolbar" role="toolbar">
   <%= back_link %>
-  <%= edit_link(@ticket) %>
-  <%= delete_link(@ticket) %>
-  <%= new_link Ottrick::Ticket %>
+  <%= edit_link([ottrick, @ticket]) %>
+  <%= delete_link([ottrick, @ticket]) %>
+  <%= new_link([ottrick, Ottrick::Ticket]) %>
 </div>

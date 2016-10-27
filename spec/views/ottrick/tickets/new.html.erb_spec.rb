@@ -1,11 +1,15 @@
 require 'rails_helper'
 
 module Ottrick
-RSpec.describe "tickets/new", :type => :view do
+RSpec.describe "ottrick/tickets/new", :type => :view do
+  helper Ottrick::ApplicationHelper
+  let(:task) { FactoryGirl.create(:task) }
   before(:each) do
+    allow(controller).to receive(:controller_name) { "ottrick_tickets" }
+    allow(controller).to receive(:action_name) { "new" }
     assign(:ticket, Ticket.new(
-      :ticketfor_id => 1234,
-      :ticketfor_type => "MyString",
+      :ticketfor_id => task.id,
+      :ticketfor_type => task.class.name,
       :sender => "MyString",
       :otrs_queue_id => 1,
       :subject => "MyString",
@@ -14,18 +18,17 @@ RSpec.describe "tickets/new", :type => :view do
   end
 
   it "renders new ticket form" do
-    pending "name spacing wobapphelpers link not yet resolved"
     render
 
-    assert_select "form[action=?][method=?]", tickets_path, "post" do
+    assert_select "form[action=?][method=?]", ottrick.tickets_path, "post" do
 
-      assert_select "input#ticket_ticketfor_id[name=?]", "ticket[ticketfor_id]"
+      assert_select "select#ticket_ticketfor_id[name=?]", "ticket[ticketfor_id]"
 
-      assert_select "input#ticket_ticketfor_type[name=?]", "ticket[ticketfor_type]"
+      assert_select "select#ticket_ticketfor_type[name=?]", "ticket[ticketfor_type]"
 
       assert_select "input#ticket_sender[name=?]", "ticket[sender]"
 
-      assert_select "input#ticket_otrs_queue_id[name=?]", "ticket[otrs_queue_id]"
+      assert_select "select#ticket_otrs_queue_id[name=?]", "ticket[otrs_queue_id]"
 
       assert_select "input#ticket_subject[name=?]", "ticket[subject]"
 

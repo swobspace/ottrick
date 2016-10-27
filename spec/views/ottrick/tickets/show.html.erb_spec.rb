@@ -1,11 +1,14 @@
 require 'rails_helper'
 
 module Ottrick
- RSpec.describe "tickets/show", :type => :view, modify: false do
+ RSpec.describe "ottrick/tickets/show", :type => :view, modify: false do
+  let(:task) { FactoryGirl.create(:task) }
   before(:each) do
+    allow(controller).to receive(:controller_name) { "ottrick_tickets" }
+    allow(controller).to receive(:action_name) { "show" }
     @ticket = assign(:ticket, FactoryGirl.create(:ticket,
-      :ticketfor_id => 1234,
-      :ticketfor_type => "Ticketfor Type",
+      :ticketfor_id => task.id,
+      :ticketfor_type => task.class.name,
       :sender => "Sender",
       :otrs_queue_id => 1,
       :subject => "Subject",
@@ -16,10 +19,9 @@ module Ottrick
   end
 
   it "renders attributes in <p>" do
-    pending "name spacing wobapphelpers link not yet resolved"
     render
-    expect(rendered).to match(/1234/)
-    expect(rendered).to match(/Ticketfor Type/)
+    expect(rendered).to match(/#{task.id}/)
+    expect(rendered).to match(/Task/)
     expect(rendered).to match(/Sender/)
     expect(rendered).to match(/1/)
     expect(rendered).to match(/Subject/)

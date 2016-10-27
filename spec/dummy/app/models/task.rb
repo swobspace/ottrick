@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  has_many :tickets, as: :ticketfor, class: Ottrick::Ticket
+  has_many :tickets, as: :ticketfor, class_name: Ottrick::Ticket
 
   validates :subject, :message, presence: true
 

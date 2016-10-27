@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "shoulda"
   s.add_development_dependency "dotenv"
   s.add_development_dependency "generator_spec"
+  s.add_development_dependency "capybara"
 
 
 end

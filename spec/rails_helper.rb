@@ -6,6 +6,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require "factory_girl_rails"
 require "shoulda"
+require 'capybara/rspec'
 require "ottrick"
 
 ENGINE_RAILS_ROOT=File.join(File.dirname(__FILE__), '../')
